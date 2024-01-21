@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./templates/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
+      rel="stylesheet"
+    />
+    <title>HackBot</title>
+  </head>
+  <body>
+    <div class="header_container">
+      <div class="buttons">
+        <div class="login_button" style="margin-top: -20px">
+          <a href="./templates/index.html"><button>Home</button></a>
+        </div>
+        <div class="signup_button" style="margin-top: -20px">
+          <a href="./templates/login.html"><button>Signup</button></a>
+        </div>
+        <div class="about_button" style="margin-top: -20px">
+          <a href="./templates/about.html"><button>About</button></a>
+        </div>
+        <div class="contact_button" style="margin-top: -20px">
+          <a href="./templates/contact.html"><button>Contact</button></a>
+        </div>
+
+        <div class="faq_button">
+          <div class="dropdown">
+            <button class="dropbtn">FAQ</button>
+            <div class="dropdown-content">
+              <div class="question-dropdown">
+                <button class="dropbtn">What is Hackthon?</button>
+                <div class="dropdown-content">
+                  <p>
+                    A hackathon is a collaborative, time-limited event where
+                    individuals or teams work intensively to create and innovate
+                    on software projects or solutions.
+                  </p>
+                </div>
+              </div>
+              <div class="question-dropdown">
+                <button class="dropbtn">
+                  What is the purpose of this Hackathon Information Chat Bot?
+                </button>
+                <div class="dropdown-content">
+                  <p>
+                    This Chat Bot is designed to provide users with
+                    comprehensive information about various hackathons. It
+                    offers details on schedules, FAQs, events, phases, prizes,
+                    collaborators, sponsors, resources, and themes/tracks for
+                    each hackathon.
+                  </p>
+                </div>
+              </div>
+              <div class="question-dropdown">
+                <button class="dropbtn">
+                  How can I use the Chat Bot to find hackathon information?
+                </button>
+                <div class="dropdown-content">
+                  <p>
+                    Simply start a conversation with the Chat Bot and ask about
+                    specific hackathons or general information. You can inquire
+                    about schedules, FAQs, events, phases, prizes,
+                    collaborators, sponsors, resources, and themes/tracks.
+                  </p>
+                </div>
+              </div>
+              <div class="question-dropdown">
+                <button class="dropbtn">
+                  How does the Chat Bot handle specific hackathon queries?
+                </button>
+                <div class="dropdown-content">
+                  <p>
+                    The Chat Bot is programmed to understand and respond to
+                    specific hackathon-related queries. You can ask about event
+                    schedules, frequently asked questions, participating
+                    collaborators, available resources, and more.
+                  </p>
+                </div>
+              </div>
+              <div class="question-dropdown">
+                <button class="dropbtn">
+                  Can the Chat Bot provide information on upcoming hackathons?
+                </button>
+                <div class="dropdown-content">
+                  <p>
+                    Yes, the Chat Bot can provide details about upcoming
+                    hackathons, including dates, themes, and registration
+                    information.
+                  </p>
+                </div>
+              </div>
+              <div class="question-dropdown">
+                <button class="dropbtn">
+                  What should I do if I have a specific question not covered by
+                  the Chat Bot?
+                </button>
+                <div class="dropdown-content">
+                  <p>
+                    If you have a specific question not covered by the Chat Bot,
+                    you can always reach out to our support team through the
+                    website. We value your feedback and are here to assist you
+                    with any additional information or queries.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="logo">
+        <img style="height: 190px;width: 190px;margin-left: -30px;margin-top: 60px;" src="./static/hackbot ai logo.png" alt="logo"/>
+      </div>
+    </div>
+
+    <div class="center_content">
+      <div class="left_content">
+        <div class="title">
+          <div class="typewriter-container" style="text-align: left">
+            <h1 class="typewriter" id="welcome-text"></h1>
+            <h1 class="typewriter" id="app-text" style="color: white"></h1>
+          </div>
+          <p
+            class="paragraph-typewriter"
+            id="lorem-ipsum"
+            style="font-family: Verdana, Geneva, Tahoma, sans-serif"
+          ></p>
+        </div>
+      </div>
+    </div>
+
+    <section class="background_content">
+      <img src="./static/stars.png" id="stars" />
+      <!-- <img src="./moon.png" id="moon"> -->
+      <img src="./static/mountains_behind.png" id="mountains_behind" />
+      <img src="./static/mountains_front.png" id="mountains_front" />
+    </section>
+
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/90c989f0-ff1a-4af1-a25b-84e739893bbb/webchat/config.js" defer></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the elements
+        const welcomeText = document.getElementById("welcome-text");
+        const appText = document.getElementById("app-text");
+        const loremIpsum = document.getElementById("lorem-ipsum");
+
+        // Set the text content for typing
+        const welcomeTextContent = "Welcome To ";
+        const appTextContent = "Hackbot ";
+        const loremIpsumContent =
+          "Meet HackBot, your swift and savvy hackathon companion. From prizes to schedules, HackBot delivers instant, precise info. Streamline your hackathon experience with this user-friendly guide, ensuring success in every coding venture. ";
+
+        // Typing speed in milliseconds
+        const typingSpeed = 100;
+
+        // Typing function
+        function typeText(element, textContent) {
+          let i = 0;
+          const typingInterval = setInterval(function () {
+            if (i < textContent.length) {
+              element.textContent += textContent.charAt(i);
+              i++;
+            } else {
+              clearInterval(typingInterval);
+            }
+          }, typingSpeed);
+        }
+
+        // Trigger typing animations
+        typeText(welcomeText, welcomeTextContent);
+        setTimeout(function () {
+          typeText(appText, appTextContent);
+        }, welcomeTextContent.length * typingSpeed + 1000); // Wait for a moment after typing "Welcome To"
+        setTimeout(function () {
+          typeText(loremIpsum, loremIpsumContent);
+        }, (welcomeTextContent.length + appTextContent.length) * typingSpeed +
+          2000); // Wait for a moment after typing "WebApp name"
+
+        const categoryDropdown = document.getElementById("category");
+        const itemDropdown = document.getElementById("item");
+
+        categoryDropdown.addEventListener("change", function () {
+          const selectedCategory = this.value;
+          updateItemDropdown(selectedCategory);
+        });
+
+        function updateItemDropdown(selectedCategory) {
+          $.ajax({
+            type: "POST",
+            url: "/get_items",
+            data: { category: selectedCategory },
+            success: function (data) {
+              itemDropdown.innerHTML =
+                "<option value='' disabled selected>Select Item</option>";
+              data.items.forEach((item) => {
+                const option = document.createElement("option");
+                option.value = item;
+                option.text = item;
+                itemDropdown.add(option);
+              });
+            },
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
